@@ -1,0 +1,6 @@
+services:
+    car.data_checker:
+        class: CarBundle\Service\DataChecker
+        arguments: ["@doctrine.orm.entity_manager", "%require_photos_to_promote_car%"]
+    CarBundle\DataFixtures\ORM\LoadDictionary:
+        tags: [doctrine.fixture.orm]
